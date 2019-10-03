@@ -114,6 +114,7 @@ function formSubmited(){
     email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
     console.log("email:"+email+", password: "+password);
+    if(email&&password){
         var login = async function(){
             const loginResult = await firebase.auth().signInWithEmailAndPassword(email, password);
             if(!loginResult.user.emailVerified){
@@ -131,12 +132,14 @@ function formSubmited(){
             // sẽ đăng nhập ở đây
         };
         login();
+      }
     }
   else if(activeForm == 'register'){
     name = document.getElementById("username").value;
     email = document.getElementById("email").value;
     password = document.getElementById("password").value;
     repassword = document.getElementById("repassword").value;
+    if(name&&email&&password&&repassword){
     var register = async function(){
         const  register = await firebase.auth().createUserWithEmailAndPassword(email,password);
         firebase.auth().currentUser.updateProfile({
@@ -147,13 +150,14 @@ function formSubmited(){
         document.getElementById("selectLogin").click();
         document.getElementById("email").value = email;
         document.getElementById("password").value = password;
-        setTimeout(() => {
-            document.getElementById("submit").click();
-        }, 1000);
+        var response = document.getElementById("response");
+        response.classList ="response";
+        response.innerHTML ="Đăng kí thành công<br>Hãy xác nhận email rồi đăng nhập";
 
     // sẽ đăng ký ở đây
     };
     register();
+  }
   }
 }
 export default usercheck;

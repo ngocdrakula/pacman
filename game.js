@@ -286,7 +286,7 @@ function inf(){
                 </div>
             `;
         }
-        str += `</div>`+"Điểm của bạn: "+presentPlus+ "/"+maxPlus+"(Điểm cao nhất: "+highPlus[4][1]+")<br>Bước di chuyển:"+" (xPac: "+xPac+", fps: "+fps+")";
+        str += `</div>`
         document.getElementById("action").innerHTML=str;
 }
 //firebase function
