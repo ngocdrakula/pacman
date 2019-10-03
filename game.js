@@ -337,7 +337,7 @@ function gamerun(inputname, inputemail){
     else{
         info.innerHTML = `
             <div class="wait-start">
-            <div id="myHighScore" class="myHighScore">`+"Bạn đã thua với số điểm: "+presentPlus+"!<br>Điểm cao nhất: "+highPlus[4][1]+`!
+            <div id="myHighScore" class="myHighScore">`+"Bạn đã thua với số điểm: "+presentPlus+"!<br>Điểm cao nhất: "+highPlus[0][1]+`!
             </div>
             <div class="start-layout">
             <button id="start" class="startbutton">
@@ -351,14 +351,6 @@ function gamerun(inputname, inputemail){
     start.addEventListener('click', function(){
         resetData(0);
         startgame();});
-    body.addEventListener("keydown", function(event){
-        let k = event.keyCode;
-        console.log(k);
-        if(k == 32){
-            resetData(0);
-            startgame();
-        }
-    });
 }
 function startgame(){
     info.innerHTML = "";
