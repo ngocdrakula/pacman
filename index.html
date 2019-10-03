@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body id="body">
+    <div class="title" id="title">
+        <div class="item">PACMAN GAME</div>
+        <div class="item">  </div>
+        <div class="item">  </div>
+        <div class="item">ARE YOU READY?</div>
+    </div>
+    <div class="info" id="info">
+    </div>
+    <div class="screen" id="gamescreen">
+    </div>
+    <div class="action" id="action">
+    </div>
+    <div class="setting" id="setting">
+        ABC
+    </div>
+    <div style="display: none">
+        <img id="ghost" src="./ghost.png" width="30px" height="30px">
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+              https://firebase.google.com/docs/web/setup#config-web-app -->
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCfC7kKpK-WFORIXtQABt1Pp8QCpCj7f0U",
+            authDomain: "js-test-40f80.firebaseapp.com",
+            databaseURL: "https://js-test-40f80.firebaseio.com",
+            projectId: "js-test-40f80",
+            storageBucket: "",
+            messagingSenderId: "1058076501048",
+            appId: "1:1058076501048:web:6829bc75f7380462"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+    </script>
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>
